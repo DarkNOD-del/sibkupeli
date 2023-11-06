@@ -1,0 +1,292 @@
+/* HEADER */
+
+.header{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    width: 100vw;
+    padding-top: 25px;
+    display: flex;
+    align-items: center;  
+    background-color: var(--var-bgcolor);
+}
+
+.header-logo{
+    width: 100%;
+    margin-left: 100px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-logo-img{
+    width: 60px;
+    height: 60px;
+}
+
+.header-logo-text{
+    font-family: 'Bad Script', cursive;
+    margin-left: 10px;
+    font-weight: 700;
+    font-size: 32px;
+}
+
+.header-nav{
+    font-family: 'Overpass Mono', monospace;
+    width:100%;
+    margin-right: 100px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    font-size: 18px;
+    text-transform: uppercase;
+    gap: 40px;
+}
+
+.nav-item{
+    transition: all 0.3s ease;
+}
+
+.nav-item:hover{
+    color: var(--var-fontcolor);
+    border-bottom: 1px solid var(--var-fontcolor);
+}
+
+.nav-item.nav-buy{
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: 1px solid var(--var-fontcolor);
+}
+
+.nav-item.nav-buy:hover{
+    background-color: var(--var-fontcolor);
+    color: var(--var-bgcolor);
+    border: 1px solid var(--var-bgcolor);
+}
+
+
+
+/* MAIN CONTENT */
+.main{
+    font-family: 'Overpass Mono', monospace;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.main-content{
+    text-align: center;
+}
+
+.main-title{
+    font-size: 80px;
+}
+
+.main-title span{
+    font-size: 83px;
+    font-weight: 700;
+}
+
+.main-subtitle{
+    font-size: 60px;
+}
+.main-proops{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.main-proop{
+    font-size: 26px;
+}
+
+
+
+/* ABOUT */
+.about{
+    margin-top: 120px;
+    margin-bottom: 120px;
+}
+
+.about-container{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+
+.about-img{
+    width: 30%;
+    object-fit: cover;
+    box-shadow: 0px 2px 8px 0px var(--var-shadowcolor);
+}
+
+.about-texts{
+    width: 60%;
+}
+
+.about-title{
+    font-family: 'Overpass Mono', monospace;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    letter-spacing: 0.1em;
+}
+
+.about-text{
+    font-size: 22px;
+    text-align: justify;
+}
+
+
+
+/* ICONS */
+.icons-container{
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.icons-container-down{
+    margin-top: 40px;
+}
+
+.icon{
+    display: flex;
+    width: 20%;
+    gap: 20px;
+    font-size: 18px;
+}
+
+.icon img{
+    height: 32px;
+    width: 32px;
+}
+
+
+
+/* FOOTER */
+
+footer{
+    width: 100%;
+    height: auto;
+    min-height: 100px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 80px;
+    padding-top: 30px;
+    border-top: 1px solid #6d6d6d18;
+}
+
+.footer-holder{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.footer-mail{
+    margin-left: 140px;
+}
+
+.footer-mail a{
+    text-decoration: underline;
+}
+
+.footer-socials{
+    margin-right: 140px;
+}
+
+.footer-socials-btns{
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-btn {
+    padding: 10px;
+    font-size: 20px;
+    width: 20px;
+    border-radius: 50%;
+    text-align: center;
+    text-decoration: none;
+    color: var(--var-fontcolor);
+}
+
+.footer-btn:hover {
+    opacity: 0.7;
+}
+
+
+
+/* OVERLAY */
+.burger-overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 5;
+    left: 0;
+    top: 0;
+    background-color: var(--var-bgcolor);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%; 
+    width: 100%; 
+    text-align: center; 
+    margin-top: 40px;
+}
+
+.burger-menu-btn {
+    padding: 8px;
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--var-fontcolor);
+    display: block; 
+    margin-bottom: 30px;
+    transition: 0.3s;
+}
+
+.burger-menu-btn:hover {
+    color: var(--var-hovercolor);
+}
+
+.burger-active-tab{
+    pointer-events: none;
+    padding: 8px;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--var-fontcolor);
+    display: block; 
+    margin-bottom: 30px;
+}
+
+.theme-icon-burger {
+    width: 60px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.theme-icon-burger:hover {
+    opacity: 0.7;
+}
+
+
+
+/* Adaptive */
+/* WIDTH */
+
